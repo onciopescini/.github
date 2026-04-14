@@ -1,0 +1,45 @@
+name: 🏛️ Architecture Decision Record (ADR)
+description: Formalizzare una decisione ingegneristica, di database strutturale o scelta librerie
+title: "[ADR]: "
+labels: ["architecture", "discussion"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **ADR (Architecture Decision Record)** è il documento formale in cui fissiamo le leggi architetturali che l'Agente e gli Ingegneri di WorkOver dovranno rispettare. Compila solo quando una discussione è già matura.
+
+  - type: input
+    id: status
+    attributes:
+      label: Status dell'ADR
+      description: Proposed, Accepted, o Deprecated?
+      value: Proposed
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Contesto architetturale
+      description: Qual è lo scenario attuale che costringe questa decisione architettonica?
+    validations:
+      required: true
+
+  - type: textarea
+    id: decision
+    attributes:
+      label: Decisione Implementativa
+      description: La decisione secca presa (es. Passaggio da Fetch a TanStack Query 5).
+    validations:
+      required: true
+
+  - type: textarea
+    id: consequences
+    attributes:
+      label: Conseguenze e Impatti (Entanglement)
+      description: |
+        Che impatto avrà? (Positivo es. Performance; Negativo es. Tech Debt per refactoring esistente). 
+        Elencare i moduli colpiti (es. Auth, Edge Functions, RLS).
+    validations:
+      required: true

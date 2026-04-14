@@ -1,0 +1,66 @@
+name: 🐞 Bug Report
+description: Segnala un bug, difetto tecnico o problema di sistema su WorkOver
+title: "[BUG]: "
+labels: ["bug", "triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Grazie per aver preso il tempo di segnalare questo problema a WorkOver. Più dettagli fornirai, più rapido sarà il nostro fix! 🚀
+
+  - type: input
+    id: environment
+    attributes:
+      label: Ambiente
+      description: Su che ambiente si è verificato? (Locale, Vercel Preview, Produzione)
+      placeholder: Produzione
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrizione del Bug
+      description: Una descrizione chiara e concisa del problema.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps Per Riprodurre
+      description: Esattamente i passaggi e iterazioni necessarie per far capitare il bug.
+      value: |
+        1. Vai su '...'
+        2. Clicca su '....'
+        3. Fai scroll fino a '....'
+        4. Si verifica l'errore
+    validations:
+      required: true
+      
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamento Atteso
+      description: Che cosa ti saresti aspettato che accadesse?
+    validations:
+      required: true
+      
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log, Sentry Data o Errori di Rete
+      description: Copia eventuali log dal terminale, console del developer tool o Sentry link. (Nascondi chiavi segrete)
+      render: shell
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Verifica Pre-Report
+      options:
+        - label: Confermo di aver cercato nelle issue passate per evitare doppioni.
+          required: true
+        - label: Confermo che NON ho incollato Secret Key (es. SERVICE_ROLE_KEY) nel report.
+          required: true

@@ -1,0 +1,54 @@
+name: 🚀 Feature Request
+description: Proponi una nuova funzionalità, miglioramento o espansione per WorkOver o WAC
+title: "[FEATURE]: "
+labels: ["enhancement", "triage"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Benvenuto/a nella Growth Area di WorkOver! 
+        Aiutaci a espandere le capacità dell'ecosistema descrivendo chiaramente l'impatto della tua idea.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Dominio interessato
+      description: A quale servizio apparterrà questa feature?
+      options:
+        - WorkOver (Host / Worker)
+        - WAC (WorkOver Admin Center)
+        - DB / Supabase Analytics
+        - Altro / Globale
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Il Problema o Caso d'Uso
+      description: Quale frustrazione, limitazione o opportunità va a colpire questa feature?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: La Soluzione Proposta
+      description: Come andrebbe implementata dal punto di vista dell'utente? (Mockups o screenshot sono benvenuti).
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative Considerate
+      description: Hai pensato a dei workaround o altre alternative prima di proporre questo sviluppo? Se sì, perché li hai scartati?
+      
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Condivisione visione
+      options:
+        - label: Concordo che questa feature è in asse con gli obiettivi strategici aziendali a lungo respiro.
+          required: true
